@@ -1,0 +1,102 @@
+#sidebar ul{
+	list-style: none;
+	margin-top: 80px;
+	margin-left: 30px;
+	margin-right: 50px;
+	font-color: #000;
+	line-height: 50px;
+	font-size: 1.5em;
+	
+}
+
+#sidebar2 ul{
+	list-style: none;
+	margin-top: 80px;
+	margin-left: 30px;
+	margin-right: 50px;
+	font-color: #000;
+	line-height: 50px;
+	font-size: 1.5em;
+	
+}
+
+#sidebar{
+	right: 0px;
+	/*float: right;*/
+	/*padding-right: 0px;*/
+	margin-right: -350px;
+	width: 350px;
+	height: 100%;
+	z-index: 100;
+	display: block;
+	opacity: 1;
+	background-color: #089DB0;
+	position:fixed;
+}
+
+#sidebar2{
+	right: 0px;
+	/*float: right;*/
+	/*padding-right: 0px;*/
+	/*margin-right: 350px;*/
+	width: 350px;
+	height: 100%;
+	z-index: 100;
+	display: block;
+	opacity: 1;
+	background-color: #089DB0;
+	position:fixed;
+}
+.icon-remove{
+	float: right;
+	color: #fff;
+}
+.icon-reorder{
+	margin-left: 20px;
+    tansition-property:all;
+    transition-duration:0.8s;
+    transition-timing-function:ease;
+
+}
+.icon-reorder:hover{
+	color: #000;
+	-webkit-transform: rotate(180deg);
+  	transform: rotate(180deg);
+}
+
+.icon-remove{
+	text-decoration: none;
+	margin-left: 20px;
+    tansition-property:all;
+    transition-duration:0.8s;
+    transition-timing-function:ease;
+
+}
+.icon-remove:hover{
+	color: #000;
+	-webkit-transform: rotate(180deg);
+  	transform: rotate(180deg);
+}
+
+/*.icon-reorder:active{
+
+}*/
+
+#sidebar ul li a{
+	color: #fff;
+	text-decoration: none;
+
+
+}
+
+#sidebar2 ul li a{
+	color: #fff;
+	text-decoration: none;
+
+
+}
+
+.logo{
+	margin-right: 20px;
+	z-index: 99;
+}
