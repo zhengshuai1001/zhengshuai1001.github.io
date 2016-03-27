@@ -3,12 +3,15 @@ var list2 = [];
 
 
   function  rightInData(inputData){
-      var dataArr = search(inputData);
+      var domLi = document.getElementById("tagDamo").getElementsByTagName("li");
+      var dataArr = search(domLi,inputData);
       if (dataArr == null) {
  	  document.getElementById("tagInput").value = "";      	
         return ;
       } else {
-      list.push(dataArr);          	
+        if (dataArr != "") {
+      list.push(dataArr);           
+        }         	
  	document.getElementById("tagInput").value = "";
  	upData();       
       }
@@ -36,8 +39,8 @@ var list2 = [];
         }
       return -1;
   }
-  function search(strFind){
-        var domLi = document.getElementById("tagDamo").getElementsByTagName("li");
+  function search(domLi,strFind){
+        // var domLi = document.getElementById("tagDamo").getElementsByTagName("li");
         for (var i = 0; i < domLi.length; i++) {
           var strData = domLi[i].innerHTML ||"";
           // var strData = list[i];
@@ -79,15 +82,20 @@ var list2 = [];
   }  
 }
     function  rightInData2(){
+      var domLi = document.getElementById("hobbyDamo").getElementsByTagName("li");      
       var dataArr = inputData2();
       if (dataArr == null) {
         return ;
       } else {
       for (var i = 0; i < dataArr.length; i++) {
-      	if (list2.length > 9) {
-      		list2.shift();
-      	} 
-      		list2.push(dataArr[i]);  
+        var data = search(domLi,dataArr[i]);
+        if(data != null){
+              if (list2.length > 9) {
+              list2.shift();
+            } 
+            list2.push(dataArr[i]);           
+        }
+ 
       }  	
  	document.getElementById("hobbyInput").value = "";
  	upData2();        
