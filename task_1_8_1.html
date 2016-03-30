@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		margin:0px;
+		padding: 0px;
+	}
+	body{
+		padding: 10px;
+	}
+	div{
+		border: 1px solid #999;
+		background-color: #eee;
+		height: 50px;
+		margin: 10px;
+		display: inline-block;
+	}
+	@media only screen and (min-width: 768px) {
+		.max_1_4{
+			width: -webkit-calc((100% - 80px) / 3);
+			width: -moz-calc((100% - 80px) / 3);
+			width: calc((100% - 80px) / 3);
+		}
+		.max_2_3{
+			width: -webkit-calc((100% - 80px)/4);
+		}
+		.max_2_6{
+			width: -webkit-calc((100% - 80px)/2);
+		}
+		.max_3_1{
+			width: -webkit-calc((100% - 120px)/12);
+		}
+		.max_3_2{
+			width: -webkit-calc((100% - 120px)/6);
+		}
+		.max_3_6{
+			width: -webkit-calc((100% - 120px)/2);
+		}
+		
+	}
+	@media only screen and (max-width: 768px) {
+		.min_1_6{
+			width: -webkit-calc((100% - 60px)/2);
+		}
+		.min_2_12{
+			width: -webkit-calc(100% - 40px);
+		}
+		.min_3_3{
+			width: -webkit-calc((100% - 80px)/4);
+		}
+		.min_3_6{
+			width: -webkit-calc((100% - 80px)/2);
+		}
+		.min_4_2{
+			width: -webkit-calc((100% - 80px)/6);
+		}
+		.min_4_8{
+			width: -webkit-calc((100% - 80px)/3*2);
+		}
+		.min_5_3{
+			width:-webkit-calc((100% - 80px)/4);
+		}
+		
+	}
+	</style>
+</head>
+<body>
+	<div class="max_1_4 min_1_6"></div>
+	<div class="max_1_4 min_1_6"></div>
+	<div class="max_1_4 min_2_12"></div>
+	<div class="max_2_3 min_3_3"></div>
+	<div class="max_2_6 min_3_6"></div>
+	<div class="max_2_3 min_3_3"></div>
+	<div class="max_3_1 min_4_2"></div>
+	<div class="max_3_1 min_4_2"></div>
+	<div class="max_3_2 min_4_8"></div>
+	<div class="max_3_2 min_5_3"></div>
+	<div class="max_3_6 min_5_3"></div>
+</body>
+</html>
