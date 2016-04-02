@@ -1,0 +1,28 @@
+#tagDamo li:hover::before{
+    content: '点击删除：';
+
+}
+#tagDamo li:hover{
+    background-color: red;
+}
+#tagDamo li{
+		min-width: 50px;
+		height: 30px;
+		color: #fff;
+		line-height: 30px;
+		text-align: center;
+		background-color: rgb(136,202,255);
+		margin-right: 10px;
+		display: inline-block;
+		cursor: pointer;
+	}
+#hobbyDamo li{
+		min-width: 50px;
+		height: 30px;
+		color: #fff;
+		line-height: 30px;
+		text-align: center;
+		background-color: rgb(255,200,136);
+		margin-right: 10px;
+		display: inline-block;
+	}

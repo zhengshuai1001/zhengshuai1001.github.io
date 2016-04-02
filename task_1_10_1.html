@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#list{
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	#one{
+		width: 150px;
+		height: 120px;
+		border: 1px solid #f00;
+		margin-bottom: 20px;
+	}
+	#two{
+		width: 150px;
+		height: 100px;
+		border: 1px solid #f00;
+		margin-bottom: 20px;
+	}
+	#three{
+		width: 150px;
+		height: 40px;
+		border: 1px solid #f00;
+		margin-bottom: 20px;
+	}
+	#four{
+		width: 150px;
+		height: 200px;
+		border: 1px solid #0f0;
+		margin-bottom: 20px;
+	}
+	@media only screen and (max-width: 640px) {
+		#list{
+			display: flex;
+			align-items:flex-start;
+			flex-wrap:wrap;
+		}
+		#four{
+			order: -1;
+		}		
+	}
+	</style>
+</head>
+<body>
+<div id="list">
+		<div id="one"></div>
+		<div id="two"></div>
+		<div id="three"></div>
+		<div id="four"></div>
+	</div>	
+</body>
+</html>
