@@ -1,0 +1,100 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+table tr:nth-child(2n+1){
+	background: rgb(204,204,204);
+}
+table tr:first-child{
+	background: #000;
+	color: #fff;
+}
+table tr:nth-child(2){
+	color: red;
+}
+table tr:nth-child(3){
+	color: red;
+}
+table tr:nth-child(4){
+	color: red;
+}
+input{
+	margin-top: 50px;
+	width: 100px;
+	transition: width 1s ease;
+	-webkit-transition: width 1s ease;
+}
+input:focus{
+	  box-shadow: 0 0 5px #72AEE6;
+	  width: 200px;
+}
+#box{
+	width:400px;
+	height: 200px;
+	position:relative;
+	margin-top: 50px;
+}
+ul{
+	height: 50px;
+	width: 160px;
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	list-style:none;
+	right: -4px;
+	bottom:0px;
+	z-index: 1;
+}
+ul li{
+	width: 53px;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+}
+ul li a{
+	display: block;
+	width: 50px;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	background-color: #ccc;
+	opacity: 0.5;
+}
+ul li a:hover{
+	background: #666;
+}
+#list{
+	transition: left 0.5;
+	height:200px;
+	overflow: hidden;
+
+
+}
+#one,#two,#three{
+	width:400px;
+	height: 200px;
+	/*position: absolute;*/
+}
+#one{
+	background-color: #00C000;	
+}
+#two{
+	background-color: #00ffff;	
+}
+#three{
+	background-color: #0100FE;	
+}
+/*#one{
+	left:0px;
+}
+#two{
+	left:-400px;
+}
+#three{
+	left:-800px;
+}*/
+/*#img1:target~.banner-container{
+    left: 0
+}*/
