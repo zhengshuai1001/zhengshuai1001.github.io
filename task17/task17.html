@@ -3,7 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>IFE JavaScript Task 01</title>
-    <script src="task17.js"></script>
+    <style type="text/css">
+      .aqi-chart-wrap{
+        height:500px;
+        width: 100%;
+        overflow: hidden;
+        zoom:1;
+      }
+      .day{
+        width: 5px;
+        height: 100%;
+        float: left;
+        position: relative;
+      }
+      .week{
+        width: 100px;
+        height: 100%;
+        float: left;
+        position: relative;
+      }
+      .month{
+        width: 200px;
+        height: 100%;
+        float: left;
+        position: relative;
+      }
+      .list{
+        position: absolute;
+        bottom: 0px;  
+        width: 100%;      
+      }
+    </style>
   </head>
 <body>
   <fieldset id="form-gra-time">
@@ -23,4 +53,5 @@
   <div class="aqi-chart-wrap">
   </div>
 </body>
+<script src="task17.js"></script>
 </html>
