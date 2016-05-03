@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task37弹出层</title>
+	<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	p{
+		padding: 100px 20px;	}
+	.header{
+		width: 100%;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		background-color: #00ffff;
+	}
+	#login{
+		float: right;
+		height: 30px;
+		width: 50px;
+		text-align: center;
+		margin-top: 10px;
+		line-height: 30px;
+		margin-right: 60px;
+		background-color: #dc143c;
+		cursor: pointer;
+	}
+/*	#login:hover{
+		opacity: 0.7;
+	}*/
+	#mask{
+		background: #000;
+		opacity: 0.7;
+		filter: alpha(opacity=70);
+		height: 1000px;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1000;
+	}
+	#login2{
+		position:fixed;
+		left: 30%;
+		top:30%;
+		z-index: 1001;
+	}
+	.loginCon{
+		width: 670px;
+		height:380px;
+		background: url(loginBg.png) no-repeat;
+		position: relative;
+	}
+	#close{
+		width: 30px;
+		height: 30px;
+		background: url(close.png) no-repeat;
+		cursor: pointer;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
+	</style>
+	<script type="text/javascript">
+		function openNewLogin(){
+			var sHeight = document.documentElement.scrollHeight;
+			var sWidth = document.documentElement.scrollWidth;
+			var wHeight = document.documentElement.clientHeight;
+			// alert(wHeight);
+				
+
+			var oMask = document.createElement("div");
+				oMask.id = "mask";
+				oMask.style.height = sHeight+"px";
+				oMask.style.width = sWidth+"px";
+				document.body.appendChild(oMask);
+			var oLogin=document. createElement("div");
+				oLogin.id="login2";
+				oLogin.innerHTML="<div id='login2'><div class='loginCon'><div id='close'></div></div></div>";
+				document.body.appendChild(oLogin);
+				var dHeight=oLogin.offsetHeight;
+				var dWidth=oLogin.offsetWidth;
+				oLogin.style.left=(sWidth-dWidth)/2 +"px";
+				oLogin.style.top=(wHeight-dHeight)/2 +"px";
+
+				var oClose=document.getElementById("close");
+				oMask.onclick=oClose.onclick=function(){
+					document.body.removeChild(oMask);
+					document.body.removeChild(oLogin);
+				}			
+		}
+		window.onload = function(){
+			var oBtn = document.getElementById("login");
+				oBtn.onclick=function(){
+				openNewLogin();
+			}
+		}
+	</script>
+</head>
+<body>
+<div class="header">
+	弹出层效果
+	<div id="login">登录</div>
+</div>	
+<div class="main">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur impedit quidem a accusantium distinctio amet praesentium doloremque maiores laborum ratione asperiores repellendus autem alias eum facilis totam placeat soluta, harum odio, provident obcaecati hic consequuntur eveniet. Unde aliquam nostrum, ad officia? Quo dolor consequuntur doloribus, iste asperiores quasi suscipit culpa aliquam modi tempore quae laborum veniam accusamus officiis delectus eum ut sint, sapiente explicabo. Illo nihil, totam. Rem, deleniti aperiam. Libero sed commodi optio neque quaerat odio inventore totam perspiciatis aliquam. Nam necessitatibus laudantium voluptatibus praesentium, beatae veritatis ratione, ut laboriosam soluta. Ipsum laborum, porro modi. Similique rem harum id.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet architecto recusandae enim neque distinctio, aut dicta nesciunt voluptatum, quam inventore labore eum. Iure dolorum sequi doloribus quis et ea numquam laudantium! Odio, doloremque, libero recusandae cum reiciendis, nesciunt quia laborum expedita quo error in culpa dolore tempora, sunt architecto. Quis, ipsa molestiae similique, amet corporis, officiis omnis suscipit, doloribus fugit commodi soluta! Est minima nobis voluptas obcaecati laboriosam, consequatur delectus tempore fugiat, et deserunt adipisci. Maiores quaerat, deleniti, possimus pariatur commodi vitae. Labore, esse, eligendi. Quia, maiores earum nihil dolorem blanditiis delectus ullam, porro excepturi expedita dolore doloremque pariatur ratione?</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, unde animi nesciunt itaque, voluptate alias explicabo consequatur consectetur odio aliquam delectus id libero minus odit mollitia quisquam similique! Neque dolores vero architecto quae saepe fugit quisquam ipsum cumque numquam necessitatibus consectetur voluptas deserunt eum fuga quia doloremque tempora, inventore pariatur tempore molestias. Officiis amet perspiciatis voluptatibus, aut! Non blanditiis nulla adipisci vel ducimus veniam, minima optio officiis, quae in quisquam odio amet rem animi. Ducimus illum vero repellendus dolore, eius excepturi necessitatibus, saepe amet eaque facilis asperiores atque non recusandae perspiciatis aliquid laudantium distinctio rem, alias voluptates. Doloremque eaque, beatae.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, laborum voluptatem ad amet iusto maiores, voluptate magnam id quas a est beatae provident sunt nostrum illum quia. Assumenda velit, enim esse odit ducimus minima asperiores quis adipisci! Veritatis quas ad dolorum magnam in, nobis accusantium sed ab placeat, quo voluptatem alias id. Quos eligendi similique illo cumque tempore soluta ea at numquam voluptatem nemo modi voluptatibus, optio suscipit reiciendis sit iusto repellat. Praesentium, unde, neque. At inventore, eveniet sed dolorem natus. Perspiciatis iste ad officia quisquam nobis minus adipisci beatae, hic consectetur commodi tempora nisi dolorum, corporis libero dolor, unde.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vero aspernatur dolorum veniam cumque repudiandae dicta sed velit qui officia maxime corporis modi inventore voluptates magnam eaque cum expedita molestias voluptas sapiente temporibus molestiae, sunt accusamus. Alias repudiandae nemo, iste id architecto cum. Eum aspernatur nam alias asperiores voluptates expedita, illum autem, nulla aliquid sit vitae eligendi, quis facere laudantium ex quos provident velit, dolore quia odit cum officia accusantium? Blanditiis deserunt soluta dicta porro temporibus pariatur optio a quas explicabo consectetur quo alias veniam, rem qui. Accusamus quisquam, obcaecati iste. Repellendus ex a nobis iusto quisquam corrupti esse officia.</p>
+</div>
+<!-- <div id="mask"></div> -->
+<!-- <div class="login2">
+	<div class="loginCon">
+		<div class="close"></div>
+	</div>
+</div> -->
+
+</body>
+</html>
